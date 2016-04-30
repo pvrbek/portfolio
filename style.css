@@ -64,15 +64,26 @@ i{
     color: #22313F;
 }
 #spock{
-    color: #ecf0f1;
+    color: #95a5a6;
     cursor: pointer;
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+    -webkit-animation: animate_bg 1s;
+    animation: animate_bg 1s;
+    -webkit-animation-iteration-count: 3;
+    animation-iteration-count: 3;
+}
+@keyframes animate_bg {
+    0%   {color:#95a5a6;}
+    50%  {color:#ecf0f1;}
+    100% {color:#95a5a6;}
+}
+
+@-webkit-keyframes animate_bg {
+    0%   {color:#95a5a6;}
+    50%  {color:#ecf0f1;}
+    100% {color:#95a5a6;}
 }
 #spock:hover{
-    color: #d35400;
+    color: #ecf0f1;
 }
 .content-top-spock{
     width: 65px;
@@ -120,6 +131,3 @@ i{
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }*/
-.fa fa-hand-spock-o fa-2x fa-spin{
-    color: #d35400;
-}
