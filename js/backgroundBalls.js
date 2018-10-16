@@ -1,4 +1,3 @@
-// Some random colors
 const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
 
 const numBalls = 50;
@@ -8,22 +7,18 @@ for (let i = 0; i < numBalls; i++) {
   let ball = document.createElement("div");
   ball.classList.add("ball");
   ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.left = `${96-Math.floor(Math.random() * 100)}%`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}px`;
   ball.style.width = `${Math.random()}em`;
   ball.style.height = ball.style.width;
-  
   balls.push(ball);
-  document.getElementsByClassName(balls)[0].appendChild(ball);
-  //document.body.append(ball); //tu promijenit body u element
+  document.body.append(ball); 
 }
 
-// Keyframes
 balls.forEach((el, i, ra) => {
   let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
+    x: Math.random() * (i % 2 === 0 ? -2 : 2),
+    y: Math.random() * 2
   };
 
   let anim = el.animate(
@@ -32,7 +27,7 @@ balls.forEach((el, i, ra) => {
       { transform: `translate(${to.x}rem, ${to.y}rem)` }
     ],
     {
-      duration: (Math.random() + 1) * 2000, // random duration
+      duration: (Math.random() + 1) * 2000, 
       direction: "alternate",
       fill: "both",
       iterations: Infinity,
