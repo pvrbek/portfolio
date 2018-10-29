@@ -10,6 +10,7 @@ body{
     background-color: #d35400;
     height: 100%;
     left: -285px;
+    top: 64px;
     position: fixed;
     width: 285px;
     z-index: 10;
@@ -67,9 +68,9 @@ i{
 .content-top li:nth-child(1){
     margin-right: 15px;
 }
-.content-top li:hover{
+.content-top li:hover, .active{
     padding-bottom: 5px;
-    border-bottom: #d35400 solid 1px;
+    border-bottom: #d35400 solid 2px;
     transition:linear 0.1s;
     -webkit-transition: linear 0.1s;
 }
@@ -86,13 +87,14 @@ i{
     font-size: 20px;
     color: #ecf0f1;
     cursor: pointer;
-    -webkit-transition: color 0.3s linear;
-    -moz-transition: color 0.3s linear;
-    -o-transition: color 0.3s linear;
-    transition: color 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
 .menu-icon-close:hover{
     color: #22313F;
+    transform: rotate(360deg);
 }
 #spock{
     color: #95a5a6;
@@ -101,6 +103,10 @@ i{
     animation: animate_bg 1.5s;
     -webkit-animation-iteration-count: 2;
     animation-iteration-count: 2;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s; 
+    transition: all 0.4s;
 }
 @keyframes animate_bg {
     0%   {color:#95a5a6;}
@@ -113,19 +119,18 @@ i{
 }
 #spock:hover{
     color: #ecf0f1;
+    transform: rotate(360deg);
 }
 .content-top-spock{
-    width: 65px; /*POIGRAT SE SA POZICIJOM*/
+    width: 65px; 
     display: inline-block;
 }
 .content-small-image{
-    display: none;
-    position: relative;
+    /*display: none;*/
+    display: block;
     background: #d35400;
-    /*display: block;*/
     margin-left: auto;
     margin-right: auto;
-    margin-top: -50px;
     height: 200px;
     border-radius: 200px;
     border-color:#ecf0f1;
@@ -210,7 +215,9 @@ ul.content-portfolio li:hover span.text-content {
     max-width:100%;
     max-height:100%;
 }
-
+.content-portfolio-image{
+    margin-top: 80px;
+}
 .ball {
   position: absolute;
   border-radius: 100%;
@@ -221,5 +228,4 @@ ul.content-portfolio li:hover span.text-content {
     width: 100%;
     background-color: white;
 }
-
 

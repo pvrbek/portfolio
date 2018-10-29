@@ -13,6 +13,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="app.js"></script>
 <script defer src="js/index.js"></script>
+<script async src="js/active_link.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
@@ -31,13 +32,12 @@
         <div class="content-top-spock">
         <i id="spock" class="fa fa-hand-spock-o fa-2x" aria-hidden="true"></i>
         </div>
-        <ul>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul >
+            <li class="navLinks active"><a href="#about">About me</a></li>
+            <li class="navLinks"><a href="#contact">Contact</a></li>
         </ul>
     </div>
-    <div class="content-protfolio-image">
-        <a href="#" class="content-image-box">
+    <div class="content-portfolio-image" id="about">
            <!-- <div class="content-small-image-layer">
                 <div class="content-layer-caption">Contact me!</div>
             </div> -->
@@ -46,24 +46,28 @@
     </div>
     <div class="content-bottom">
         <script src="js/backgroundBalls.js"></script>
-        <p class="content-bottom-quote"><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, consectetur 
-        adipiscing elit. Nam lacinia ullamcorper nibh, nec aliquet nulla blandit scelerisque. Vestibulum commodo, nunc ac facilisis 
-        sollicitudin, turpis sapien dapibus metus, sit amet ultrices enim quam vel sem. Donec in scelerisque enim. Nunc ut elementum 
-        ex, nec luctus magna. Donec non felis sit amet purus mollis eleifend.<i class="fa fa-quote-right" aria-hidden="true"></i></p>
-        <p class="content-bottom-text" id="about">Lorem ipsum dolor sit amet, volumus suavitate scribentur id mea, ut molestie intellegat quo. An quidam commune ius, at qui
-        unum viris, no eum malis sententiae. Sit eruditi omittam at. Id vim aliquando persequeris, ex sale soluta sapientem duo,
-        elitr dolorem ea per. Pri vero offendit ne. Suas reprimique mel no. Vim an idque sapientem, eu doming aliquando vel. Liberavisse
-        suscipiantur usu eu. Ut aliquid luptatum temporibus quo, has nobis omittam disputationi ex. Ad quem paulo mei, et justo altera
-        argumentum duo, dicant fierent et mea. An qui laudem cetero scribentur. Nec ne partiendo salutatus. Postea appareat indoctum
-        cu vix. Id mei partem pertinacia. Vim ne nusquam corpora, sint nemore option usu ut. Est euismod percipitur ut. Te prompta
-        volumus corrumpit usu, est te utroque facilisi insolens, id populo tacimates torquatos his. Ceteros fabellas qualisque eu
-        nam, mei porro mundi utamur ad. Ad cum dictas vivendo. Semper ocurreret ad mea. Aeterno omnesque nominavi mea at. Mea in
-        agam option vidisse, affert sadipscing at sit. Modus solet convenire mei ut, has nibh graeco no. Alterum euismod ne per,
-        agam fuisset at vim. Est postea volutpat omittantur id, ut duo enim debet efficiantur, et posse quodsi scribentur eos. Nam
-        dicat dictas ancillae cu.</p>
+        <h1 >Hi! My name is Petar Vrbek,</h1>
+        <p class="content-bottom-text" >in my free time I'm learning about software engineering and working as a Business Intelligence report developer in the biggest Croatian airline. </p>
+        <p class="content-bottom-text">I have a diverse set of skills like design, developing BI reports, writing SQL queries and developing Android apps, but I'm primarily interested in Web development.</p>
+        <p class="content-bottom-quote"><i class="fa fa-quote-left" aria-hidden="true"></i>Develop a passion for learning. If you do, you will never cease to grow. - Anthony J. D'Angelo
+        <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+        <h1 id="contact">Contact me</h1>
+        <h3>Email</h3>
+        <nav>
+            <ul>
+                <li>petar.vrbek@gmail.com</li>
+            </ul>
+        </nav>
+            <h3>Hometown</h3>
+        <nav>
+            <ul>
+                <li>Zagreb, Croatia</li>
+            </ul>
+        </nav>
+        
     </div>
 </div>
-    <ul class="content-portfolio">
+    <!--<ul class="content-portfolio">
         <li>
             <a href="#top">
                 <img class="content-portfolio-img" src="images/HTML.png" />
@@ -92,7 +96,8 @@
                 </span>
             </a>
         </li>
-    </ul>
+    </ul>-->
+    
 </div>
 </body>
 </html>
